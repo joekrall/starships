@@ -28,16 +28,18 @@ function App() {
   return (
     <div className="App">
       <Col md={4} className="d-block header" >
-        <Col className="d-inline-flex justify-content-center">
+        <Col className="d-inline-flex justify-content-center ">
         <h1>Starships</h1>
         
-        <Col className="d-inline-flex justify-content-center">
-        <h5>Powered by the Star Wars API</h5>
+        <Col className="d-inline-flex justify-content-center ">
+        <h5 ><a href="https://swapi.dev/about">Powered by the Star Wars API</a></h5>
         </Col>
         </Col>
         <SearchBar setSearchTerm={setSearchTerm} />
       </Col>
+      <Col>
       <StarshipTable starships={starships}/>
+      </Col>
     </div>
   );
 }
