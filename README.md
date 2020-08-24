@@ -1,3 +1,14 @@
+A small project for practicing using React Hooks and the Star Wars API. This app allows you to search the SWAPI's database of starships by name and model (using case-insensitive partial matches).
+
+Todo:
+- Implement sort functionality on each field
+- Replace Bootstrap styling with vanilla CSS
+- Incorporate pagination
+
+Thank you to Tania Rascia (https://www.taniarascia.com/crud-app-in-react-with-hooks/), Harsh Makadia (https://blog.bitsrc.io/making-api-calls-with-react-hooks-748ebfc7de8c) and Spencer Fang (https://itnext.io/how-to-get-resources-from-paginated-rest-api-d7c20fe2bb0b) for their articles!
+
+------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
