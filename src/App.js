@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import StarshipTable from './StarshipTable';
+import StarshipTable from './Table';
 import SearchBar from './SearchBar'
-import Pages from './Pages'
 import * as Utils from './utilities'
 import { Col, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   const [searchTerm, setSearchTerm] = useState("");
-  //const [currentPage, setCurrentPage] = useState(1);
   const [starships, setStarships] = useState([]);
   const [count, setCount] = useState(0);
   
@@ -29,13 +27,17 @@ function App() {
 
   return (
     <div className="App">
-      <Col md={4}>
+      <Col md={4} className="d-block header" >
+        <Col className="d-inline-flex justify-content-center">
         <h1>Starships</h1>
-      
-      {/* <Pages count={count} setCurrentPage={setCurrentPage} /> */}
+        
+        <Col className="d-inline-flex justify-content-center">
+        <h5>Powered by the Star Wars API</h5>
+        </Col>
+        </Col>
         <SearchBar setSearchTerm={setSearchTerm} />
       </Col>
-        <StarshipTable starships={starships}/>
+      <StarshipTable starships={starships}/>
     </div>
   );
 }

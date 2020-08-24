@@ -9,15 +9,16 @@ const StarshipTable = (props) => {
 
 
   return (
-      <Table className="">
+      <Table variant="dark">
         <thead>
           <tr>
             <th>Name</th>
             <th>Model</th>
+            <th>Class</th>
+            <th>Hyperdrive Rating</th>
             <th>Cargo Capacity</th>
             <th>Cost in Credits</th>
             <th>Crew</th>
-            <th>Hyperdrive Rating</th>
           </tr>
         </thead>
         <tbody>
@@ -27,10 +28,11 @@ const StarshipTable = (props) => {
           <tr>
             <td>{starship.name}</td>
             <td>{starship.model}</td>
+            <td>{starship.starship_class}</td>
+            <td>{starship.hyperdrive_rating}</td>
             <td>{starship.cargo_capacity}</td>   
             <td>{starship.cost_in_credits}</td>
             <td>{starship.crew}</td>
-            <td>{starship.hyperdrive_rating}</td>
           </tr>
           </React.Fragment>
           ))      

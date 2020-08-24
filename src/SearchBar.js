@@ -13,7 +13,7 @@ const SearchBar = (props) => {
   return (
         <InputGroup>
         <FormControl
-          placeholder="search"
+          placeholder="Search by name or model"
           onChange={event => 
             handleInputChange(event.target.value)
           }
