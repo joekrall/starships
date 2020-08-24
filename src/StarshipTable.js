@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import {Table} from "react-bootstrap";
+import {Col, Table} from "react-bootstrap";
 import axios from "axios";
 
 import "./index.css";
@@ -9,8 +9,7 @@ const StarshipTable = (props) => {
 
 
   return (
-    <div>
-      <Table className="striped bordered hover">
+      <Table className="">
         <thead>
           <tr>
             <th>Name</th>
@@ -42,7 +41,6 @@ const StarshipTable = (props) => {
           )}
         </tbody>
       </ Table>
-    </div>
   );
 
 }

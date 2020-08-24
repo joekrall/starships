@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { InputGroup, FormControl, Col  } from "react-bootstrap";
 
 const SearchBar = (props) => {
 
@@ -10,16 +11,15 @@ const SearchBar = (props) => {
   }
 
   return (
-      <div>
-        <input
-          className="form-control"
-          type="text"
+        <InputGroup>
+        <FormControl
           placeholder="search"
           onChange={event => 
             handleInputChange(event.target.value)
           }
         />
-    </div>
+        </InputGroup>
+
    )
   
 }

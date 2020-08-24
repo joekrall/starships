@@ -3,6 +3,7 @@ import StarshipTable from './StarshipTable';
 import SearchBar from './SearchBar'
 import Pages from './Pages'
 import * as Utils from './utilities'
+import { Col, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -17,7 +18,6 @@ function App() {
 
   useEffect(() => {
     new Promise((resolve, reject) => {
-      console.log("new promise")
       Utils.getStarships(`https://swapi.dev/api/starships/?search=${searchTerm}`, [], resolve, reject)
     })
       .then(response => {
@@ -29,11 +29,12 @@ function App() {
 
   return (
     <div className="App">
-      
-      <h1> Starships </h1>
+      <Col md={4}>
+        <h1> Starships </h1>
       
       {/* <Pages count={count} setCurrentPage={setCurrentPage} /> */}
         <SearchBar setSearchTerm={setSearchTerm} />
+      </Col>
         <StarshipTable starships={starships}/>
     </div>
   );
