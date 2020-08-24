@@ -5,8 +5,8 @@ const SearchBar = (props) => {
   const initialSearch = "";
   const [searchTerm, setSearchTerm] = useState(initialSearch);
 
-  const handleInputChange = (event) => {
-
+  const handleInputChange = (searchTerm) => {
+    props.setSearchTerm(searchTerm);
   }
 
   return (

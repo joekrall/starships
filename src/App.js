@@ -2,31 +2,29 @@ import React, { useState, useEffect } from "react";
 import StarshipTable from './StarshipTable';
 import SearchBar from './SearchBar'
 import Pages from './Pages'
+import * as Utils from './utilities'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
+  //const [currentPage, setCurrentPage] = useState(1);
   const [starships, setStarships] = useState([]);
   const [count, setCount] = useState(0);
   
-  const search = (term) => {
-    setSearchTerm(term);
-  }
+
 
   useEffect(() => {
-
-    fetch(`https://swapi.dev/api/starships/?page=${currentPage}&search=${searchTerm}`)
-       .then(res => res.json())
-      .then(data => {
-        console.log(data.results)
-        setCount(data.count)
-        setStarships(data.results)
+    new Promise((resolve, reject) => {
+      console.log("new promise")
+      Utils.getStarships(`https://swapi.dev/api/starships/?search=${searchTerm}`, [], resolve, reject)
+    })
+      .then(response => {
+        setCount(response.length);
+        setStarships(response);
       })
-      .catch(error => console.log(error))
-  },  [currentPage]);
+  }, [searchTerm]);
 
 
   return (
@@ -34,8 +32,8 @@ function App() {
       
       <h1> Starships </h1>
       
-      <Pages count={count} setCurrentPage={setCurrentPage} />
-        <SearchBar search={search} />
+      {/* <Pages count={count} setCurrentPage={setCurrentPage} /> */}
+        <SearchBar setSearchTerm={setSearchTerm} />
         <StarshipTable starships={starships}/>
     </div>
   );

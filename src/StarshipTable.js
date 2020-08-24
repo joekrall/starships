@@ -22,7 +22,7 @@ const StarshipTable = (props) => {
           </tr>
         </thead>
         <tbody>
-        {props.starships.length > 0 ? (
+        {props.starships.length > 0  ? (
           props.starships.map((starship) => (
           <React.Fragment>
           <tr>
