@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "866fcd9701163f261270a57496234e6d",
+    "revision": "5a0f0144d613b10a158ef4abc7d24c6e",
     "url": "/starships/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/starships/static/css/2.11829350.chunk.css"
   },
   {
-    "revision": "fe1e72825699c0b2921a",
-    "url": "/starships/static/css/main.0802758c.chunk.css"
+    "revision": "e303f6c22a37147e2cb3",
+    "url": "/starships/static/css/main.7d20766f.chunk.css"
   },
   {
     "revision": "2f155cad76486f545f50",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/starships/static/js/2.5c70d346.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe1e72825699c0b2921a",
-    "url": "/starships/static/js/main.36992fff.chunk.js"
+    "revision": "e303f6c22a37147e2cb3",
+    "url": "/starships/static/js/main.b6664459.chunk.js"
   },
   {
     "revision": "b98beb907e10a25fb4c4",
