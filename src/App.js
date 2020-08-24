@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Col md={4}>
-        <h1> Starships </h1>
+        <h1>Starships</h1>
       
       {/* <Pages count={count} setCurrentPage={setCurrentPage} /> */}
         <SearchBar setSearchTerm={setSearchTerm} />
