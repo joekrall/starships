@@ -1,5 +1,7 @@
 A small project for practicing using React Hooks and the Star Wars API. This app allows you to search the SWAPI's database of starships by name and model (using case-insensitive partial matches).
 
+This app is deployed at https://krallj.github.io/starships/.
+
 Todo:
 - Implement sort functionality on each field
 - Replace Bootstrap styling with vanilla CSS
