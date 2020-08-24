@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import {Table} from "react-bootstrap";
-//import Starship from './Starship'
 import axios from "axios";
 
 import "./index.css";
@@ -19,7 +18,7 @@ const StarshipTable = (props) => {
             <th>Cargo Capacity</th>
             <th>Cost in Credits</th>
             <th>Crew</th>
-            <th>Hyperdrive Rating      </th>
+            <th>Hyperdrive Rating</th>
           </tr>
         </thead>
         <tbody>
